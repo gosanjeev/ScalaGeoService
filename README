@@ -1,0 +1,32 @@
+============= REQUIREMENT ==========
+http://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&sensor=false
+GET: geo/latlng=40.714224,-73.961452
+
+http://api.census.gov/data/2010/sf1?key=[user key]&get=PCT012A015,PCT012A119&for=state:01
+GET: fun/census/{id}
+POST: fun/census
+PUT: fun/census/
+DELETE: fun/census/
+
+========================
+HOW TO USE THIS TEMPLATE
+========================
+
+* install sbt 0.11.2  if you do not have it already. You can get it from here: https://github.com/harrah/xsbt/wiki/Getting-Started-Setup
+
+* execute `sbt` and then `compile` to build the project
+
+* execute `sbt` and then 'run' to run the built-in development server
+
+* execute `sbt assembly` to generate a jar distribution 
+
+http://localhost:9000/geo?latlng=37.7749295,-122.4194155
+
+Build.scala
+    //scalaVersion := "2.10.0",
+    scalaVersion := "2.9.2",
+    //logManager <<= extraLoggers(com.typesafe.util.Sbt.logger),
+    //libraryDependencies += "com.typesafe" %% "play-mini" % "2.1-RC2",
+    libraryDependencies += "com.typesafe" %% "play-mini" % "2.0.3",
+
+build.properties: sbt.version=0.11.2
